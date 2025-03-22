@@ -1,0 +1,22 @@
+[
+    {   
+        "question": "What payment methods do you accept?", 
+        "answer": "We accept all major credit cards and PayPal." 
+    },
+    { 
+        "question": "How do I track my order?", 
+        "answer": "You can track your order through the link provided in your confirmation email." 
+    },
+    { 
+        "question": "How long do shipments typically take to arrive?", 
+        "answer": "Shipments usually take one week to arrive. Please contact us if your shipment has not arrived by then." 
+    },
+    { 
+        "question": "How often are sales held? I missed out on a card I really wanted.", 
+        "answer": "We typically have sales events for 3-5 new cards every week. Check back regularly so you won't miss out!" 
+    },
+    { 
+        "question": "Do you currently deliver to countries outside of the US?", 
+        "answer": "We are currently working on expanding our services internationally. Thank you for your patience!" 
+    }
+]

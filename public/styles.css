@@ -1,0 +1,111 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 22nd, 2024
+
+    This is the styles.css page for my e-commerce site selling Yu-Gi-Oh cards.
+    It gives my website a consistent look and feel centered around the theme of 
+    ancient Egypt.
+*/
+
+.hidden {
+    display: none;
+}
+
+body, nav > ul, header > div {
+    display: flex;
+}
+
+body {
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Cinzel', sans-serif;
+    background-color: #FFC077;
+}
+
+nav > ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 5px;
+    column-gap: 50px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body, nav a {
+    color: #AD0A08;
+}
+
+body, button {
+    font-weight: 700;
+}
+
+h2, h3 {
+    border-bottom: 2px solid #9F6017;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+input, select, button, textarea {
+    background-color: bisque;
+    border: 2px solid #165365;
+}
+
+nav, footer {
+    background-color: bisque;
+    border: 2px solid #9F6017;
+}
+
+header, main, nav > ul {
+    padding: 5px;
+}
+
+header, main, footer {
+    margin: 15px;
+}
+
+header > div {
+    column-gap: 1%;
+    margin-left: 4%;
+}
+
+header > div > img {
+    width: 20%;
+    max-width: 250px;
+}
+
+nav {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+nav img {
+    width: 30px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #AD0A08;
+}
+
+button:active {
+    transform: translate(0px, 2px);
+}
+
+button, footer > p, option, optgroup, input, select {
+    color: #165365;
+}
+
+footer {
+    padding: 10px;
+}

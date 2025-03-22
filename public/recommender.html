@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 13th, 2024
+
+    This is the recommender.html page for my e-commerce site selling Yu-Gi-Oh 
+    cards. It currently features an algorithm to determine the most compatible
+    cards with a selected card.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Yu-Gi-Oh! Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Creepster&display=swap" 
+     rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <script src="utils.js"></script>
+    <script defer src="shop.js"></script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div>
+                <img src="img/dragon-flipped.png" alt="Dragon Border, flipped horizontally">
+                <h1>The Yu-Gi-Oh! Store</h1>
+                <!-- Source: https://ac-illust.com/clip-art/24703606 -->
+                <img src="img/dragon.png" alt="Dragon Border">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Our Selection</a></li>
+                    <li><a href="recommender.html">Card Recommender</a></li>
+                    <li><a href="deck-builder.html">Deck Builder</a></li>
+                    <li><a href="customer-service.html">Customer Service</a></li>
+                    <li><a href="login-register.html">Login/Register</a></li>
+                    <li id="cart-icon">
+                        <!-- Source: Frey Wazza. https://www.flaticon.com/free-icons/retail" -->
+                        <img src="img/cart.png" alt="Shopping cart icon">
+                        <p>0</p>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="products">
+                <h2>Welcome to the card recommender!</h2>
+                <p>
+                    Search for your favorite card, and we'll show you what cards
+                    pair well with it!
+                </p>
+                <div id="search-filter">
+                    <div>
+                        <input id="search-bar" type="text" name="name" placeholder="Filter Cards by Name">
+                        <button id="search-btn">Search!</button>
+                    </div>
+                    <div id="stars">
+                        <!-- Image from "https://commons.wikimedia.org/wiki/File:Starball_Red.svg" -->
+                        <span data-value="1">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="2">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="3">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="4">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="5">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="6">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="7">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="8">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="9">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="10">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="11">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <span data-value="12">
+                            <img src="img/star.png" alt="Yu-Gi-Oh! Star">
+                        </span>
+                        <button>Reset Level</button>
+                    </div>
+                    <input id="level" class="hidden" name="level" type="number" value="12">
+                    <select>
+                        <option disabled selected>Filter By...</option>
+                        <optgroup label="Non-Monster Type">
+                            <option>Spell Card</option>
+                            <option>Trap Card</option>
+                        </optgroup>
+                        <optgroup label="Monster Attribute">
+                            <option>DARK</option>
+                            <option>LIGHT</option>
+                            <option>DIVINE</option>
+                            <option>FIRE</option>
+                            <option>WIND</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div id="products-display" class="card-display">
+                    <!-- Fill with products retrieved from the API. -->
+                </div>
+            </section>
+        </main>
+
+        <section id="product" class="hidden">
+            <button id="back-btn">X</button>
+            <div>
+                <!-- Fill with single product from the API. -->
+            </div>
+            <h2>Recommended Cards</h2>
+            <div id="recommended-display" class="card-display">
+                <!-- Fill with products retrieved from the API. -->
+            </div>
+        </section>
+
+        <footer>
+            <h3>Contact Us!</h3>
+            <p>Username: impykins on Discord</p>
+
+            <h3>Citations</h3>
+            <p>
+                &copy; 1996 Kazuki Takahashi. &copy; 2024 Konami Digital 
+                Entertainment. Yu-Gi-Oh! and all related materials are trademarks 
+                and copyrights of Konami Digital Entertainment.
+            </p>
+            <p>All other images that are not my own are cited in source code.</p>
+        </footer>
+    </div>
+
+    <section id="cart" class="hidden">
+        <button id="exit-cart-btn">X</button>
+        <h2>Your Cart</h2>
+        <div>
+            <!-- Fill with products added to the cart. -->
+        </div>
+        <p>Total price: $<span>0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <p id="cart-message"></p>
+    </section>
+</body>
+
+</html>

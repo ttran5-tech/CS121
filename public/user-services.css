@@ -1,0 +1,57 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 13th, 2024
+
+    This is the user-services.css page for my e-commerce site selling 
+    Yu-Gi-Oh cards. It gives my user-service-specific elements a 
+    consistent look and feel centered around the theme of ancient Egypt.
+*/
+
+main, section,  form {
+    display: flex;
+}
+
+body, main, section, form {
+    flex-direction: column;
+}
+
+main, form {
+    align-items: center;
+}
+
+h2 {
+    align-self: center;
+}
+
+section, form {
+    width: 50%;
+    border: 2px solid #165365;
+    padding: 10px;
+}
+
+section, form, form > button {
+    margin: 10px;
+}
+
+section > button {
+    margin: 25px;
+}
+
+section > div {
+    margin: 5px;
+    border-bottom: 2px solid #9F6017;
+}
+
+section p {
+    color: #165365;
+    font-size: 14pt;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+form p, input, textarea {
+    width: 80%;
+}

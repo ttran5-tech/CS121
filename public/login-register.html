@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Thang Tran
+    CS 121 Winter 2025
+    Date: March 21st, 2025
+
+    TODO
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Yu-Gi-Oh! Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Creepster&display=swap" 
+     rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user-services.css">
+    <script src="utils.js"></script>
+    <script defer src="login-register.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="img/dragon-flipped.png" alt="Dragon Border, flipped horizontally">
+            <h1>The Yu-Gi-Oh! Store</h1>
+            <!-- Source: https://ac-illust.com/clip-art/24703606 -->
+            <img src="img/dragon.png" alt="Dragon Border">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Our Selection</a></li>
+                <li><a href="recommender.html">Card Recommender</a></li>
+                <li><a href="deck-builder.html">Deck Builder</a></li>
+                <li><a href="customer-service.html">Customer Service</a></li>
+                <li><a href="login-register.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="logout-section" class="hidden">
+            <h2>Welcome, username!</h2>
+            <button>Log Out</button>
+        </section>
+
+        <form id="login-form">
+            <h2>Login</h2>
+
+            <p>Username</p>
+            <input name="username" type="text" required>
+
+            <p>Password</p>
+            <input name="password" type="password" required>
+
+            <button>Submit</button>
+        </form>
+
+        <form id="register-form">
+            <h2>Don't have an account? Register here!</h2>
+
+            <p>Username</p>
+            <input name="username" type="text" required>
+
+            <p>Password</p>
+            <input name="password" type="password" required>
+
+            <button>Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <h3>Contact Us!</h3>
+        <p>Username: impykins on Discord</p>
+
+        <h3>Citations</h3>
+        <p>
+            &copy; 1996 Kazuki Takahashi. &copy; 2024 Konami Digital 
+            Entertainment. Yu-Gi-Oh! and all related materials are trademarks 
+            and copyrights of Konami Digital Entertainment.
+        </p>
+        <p>All other images that are not my own are cited in source code.</p>
+    </footer>
+</body>
+
+</html>

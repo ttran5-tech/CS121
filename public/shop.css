@@ -1,0 +1,161 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 13th, 2024
+
+    This is the shop.css page for my e-commerce site selling Yu-Gi-Oh cards.
+    It gives my shop-specific elements a consistent look and feel centered 
+    around the theme of ancient Egypt.
+*/
+
+main.hidden, #product.hidden, #cart.hidden {
+    display: none;
+}
+
+.selected, figure.selected, #stars, #cart {
+    background-color: bisque;
+}
+
+.inactive, span.inactive {
+    opacity: 25%;
+}
+
+.recommended, img.inactive {
+    opacity: 50%;
+}
+
+.card-display, #search-filter, #product > div, #cart > div, 
+#search-filter > div, #stars, #stars > span, #cart-icon, figure > div, #cart {
+    display: flex;
+}
+
+body > div, #cart > div, #cart {
+    flex-direction: column;
+}
+
+#search-filter, #cart-icon {
+    justify-content: space-between;
+}
+
+#product > div {
+    justify-content: space-evenly;
+}
+
+#stars > span, #cart, #cart-icon, figure > div {
+    align-items: center;
+}
+
+body > div {
+    flex-grow: 1;
+}
+
+#product, #cart {
+    margin: 15px;
+}
+
+#product ul {
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#product li {
+    font-size: 30pt;
+}
+
+#product figure {
+    width: 30%;
+}
+
+#product figcaption {
+    font-size: 18pt;
+}
+
+#product > div, #search-filter {
+    margin-top: 10px;
+}
+
+#cart {
+    border: 2px solid #9F6017;
+}
+
+#cart figure {
+    border: 2px solid #165365;
+}
+
+#cart, figcaption, main figure, #product figure, #product ul {
+    padding: 5px;
+}
+
+#cart-icon:active {
+    transform: translate(0px, 2px);
+}
+
+figcaption, #cart {
+    text-align: center;
+}
+
+figcaption > p, #products > p {
+    color: #165365;
+}
+
+.card-display > figure {
+    width: 10%;
+}
+
+.card-display figcaption, #cart {
+    font-size: 12pt;
+}
+
+.card-display img, #product img, #stars img, #cart img {
+    width: 100%;
+}
+
+#deck-display {
+    flex-wrap: wrap;
+}
+
+#cart-icon {
+    align-self: flex-end;
+    margin-left: auto;
+    width: 50px;
+    margin-right: 20px;
+}
+
+#cart-icon p {
+    margin: 10px;
+    color: #165365;
+}
+
+#cart {
+    min-width: 15%;
+    max-width: 20%;
+}
+
+.subtract-btn, .add-btn, #search-filter button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.subtract-btn:hover, .add-btn:hover {
+    height: 30px;
+}
+
+#exit-cart-btn {
+    align-self: flex-start;
+}
+
+#stars {
+    width: 25%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#stars > span {
+    margin: 2px;
+}
+
+#stars button {
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
